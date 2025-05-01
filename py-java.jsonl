@@ -1,0 +1,13 @@
+{"input": "def osszeg(a, b):\n    return a + b", "output": "public int osszeg(int a, int b) {\n    return a + b;\n}\n###"}
+{"input": "def sum(a, b, c): return a + b + c", "output": "public int add(int a, int b, int c) { return a + b + c;\n }\n###"}
+{"input": "def prod(a, b): return (a * b)/8", "output": "public int add(int a, int b) { return (a * b)/8;\n }\n###"}
+{"input": "def prod(a, b, x): return (a + x + b)/8", "output": "public int add(int a, int b, int x) { return (a + x + b)/8;\n }\n###"}
+{"input": "for i in range(3):\n    print(i)", "output": "for (int i = 0; i < 3; i++) {\n    System.out.println(i);\n}\n###"}
+{"input": "while szam < 10:\n    szam += 1", "output": "while (szam < 10) {\n    szam++;\n}\n###"}
+{"input": "def multiply(a, b):\n    return a * b", "output": "public int multiply(int a, int b) {\n    return a * b;\n}\n###"}
+{"input": "def greet(name):\n    return f'Hello, {name}!'", "output": "public String greet(String name) {\n    return \"Hello, \" + name + \"!\";\n}\n###"}
+{"input": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)", "output": "public int factorial(int n) {\n    if (n == 0) {\n        return 1;\n    } else {\n        return n * factorial(n - 1);\n    }\n}\n###"}
+{"input": "def fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)", "output": "public int fibonacci(int n) {\n    if (n <= 1) {\n        return n;\n    } else {\n        return fibonacci(n - 1) + fibonacci(n - 2);\n    }\n}\n###"}
+{"input": "def is_even(n):\n    return n % 2 == 0", "output": "public boolean isEven(int n) {\n    return n % 2 == 0;\n}\n###"}
+{"input": "def count_up_to(n):\n    for i in range(n):\n        print(i)", "output": "public void countUpTo(int n) {\n    for (int i = 0; i < n; i++) {\n        System.out.println(i);\n    }\n}\n###"}
+{"input": "def reverse_string(s):\n    return s[::-1]", "output": "public String reverseString(String s) {\n    StringBuilder reversed = new StringBuilder(s);\n    return reversed.reverse().toString();\n}\n###"}
