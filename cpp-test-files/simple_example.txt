@@ -1,0 +1,2 @@
+Hello, this is a simple file write example.
+We are writing text to a file and reading it back.
