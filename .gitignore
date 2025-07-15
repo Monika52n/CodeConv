@@ -1,2 +1,4 @@
 bloom-cpp2java/
 bloom-py2java/
+*.class
+*.exe
