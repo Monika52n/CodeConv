@@ -1,6 +1,10 @@
 # C++ to Java Converter Using Bloom Model
 
-This project uses a Bloom-based language model to convert C++ code to Java.
+This project explores code conversion using the Bloom language model.
+
+- **C++ → Java**: Fully functional, includes training data, scripts, and file conversion workflow.
+- **Python → Java**: In an early experimental stage, scripts are in place, but there is no actual training data yet.
+
 
 ## Project Structure
 
@@ -30,3 +34,53 @@ This project uses a Bloom-based language model to convert C++ code to Java.
 3. Run `cpp-reader.py` to generate the test file list from `cpp-test-files/`.
 4. Use `cpp-java-test.py` to convert C++ test files to Java.
 5. Review and move correct Java files to `java-files-corrected/`.
+
+## Training Data
+
+The dataset created for our experiments includes code segments from the following categories:
+
+- **Basic Functions**: Simple functions such as factorial or Fibonacci.
+- **Control Structures**: Examples using `for`, `while`, `foreach`, `switch`, and `if` statements.
+- **Class Definitions and Inheritance**: Object-oriented constructs including base and derived classes.
+- **Fundamental Data Structures**: Arrays, lists, and maps.
+- **Simple Algorithms**: Basic logic like minimum/maximum selection.
+- **String Operations**: Manipulating and processing string data.
+- **File I/O**: Reading from and writing to files.
+- **Structs and Enums**: Examples involving custom data types and enumerations.
+
+## Results
+
+### Examples of Generated Code
+
+The model was able to successfully translate several basic programming constructs. For instance:
+
+Python input
+```python
+def factorial(n):
+    return 1 if n == 0 else n * factorial(n - 1)
+```
+
+Java output
+```java
+public static int factorial(int n) {
+    return n == 0 ? 1 : n * factorial(n - 1);
+}
+```
+
+### Types of Errors
+The most common types of errors observed during the experiments were:
+
+1. **Syntactic errors**:
+Missing semicolons, braces, or parentheses in the generated Java code.
+
+2. **Incorrect mapping of language-specific constructs**:
+For example, Python- or C++-specific features were sometimes improperly translated into Java.
+
+3. **Memory handling differences**:
+Code using C++-style pointers or manual memory management caused issues in Java, which uses a different memory model.
+
+4. **Incomplete translations**:
+In some cases, the output Java code lacked essential parts of the original logic or structure.
+
+5. **Stylistic or non-idiomatic Java**:
+While the generated Java code may compile and run correctly, it does not always follow typical Java conventions or best practices.
